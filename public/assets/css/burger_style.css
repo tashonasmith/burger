@@ -1,0 +1,56 @@
+body {
+    background-color: mediumpurple;
+}
+
+#heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;  
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500; 
+}
+
+p {
+    font-family: 'Tenali Ramakrishna', sans-serif; 
+    font-size: larger; 
+}
+
+button {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: larger;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#burger-divs {
+    display: flex;
+    justify-content: center;
+}
+
+#not-devoured {
+    margin-right: 60px;
+}
+
+input {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#submit {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#enter {
+    text-align: center;
+}

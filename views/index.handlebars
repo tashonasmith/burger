@@ -1,9 +1,12 @@
-<h1>Eat Da Burger</h1>
+<h1 id="heading">Eat Da Burger</h1>
 
-<div id="img-div"></div>
+<div id="img-div">
+    <img src="/assets/img/burger.png" alt="burger" width="200">
+</div>
 
 <div id="burger-divs">
   <div id="not-devoured">
+    <h2>Burgers to Devour:</h2>
     <ul>  
     {{#each burgers}}
       {{#unless this.devoured}}
@@ -17,11 +20,12 @@
   </div>
 
   <div id="devoured">
+      <h2>Burgers Already Devoured:</h2>
     <ul> 
      {{#each burgers}}
         {{#if devoured}}
           <li>
-            <p>{{burger_name}}</p>
+            <p>{{id}}. {{burger_name}}</p>
           </li> 
         {{/if}}
       {{/each}}
@@ -35,7 +39,7 @@
 	<button type="submit" id="submit">Submit</button>
 </form>
 
-<p>Enter a burger you want to eat and click the "Submit" button</p>
+<p id="enter">Enter a burger you want to eat and click the "Submit" button</p>
 
 <script type="text/javascript">
     $(".devourbtn").on("click", function (event) {
