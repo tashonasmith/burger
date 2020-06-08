@@ -42,7 +42,7 @@
       event.preventDefault();
       var id = $(this).data("burgerid");
       console.log(id);
-    // Send the PUT request.
+    
       $.ajax({
         method: "PUT",
         url: "/api/burgers/" + id
