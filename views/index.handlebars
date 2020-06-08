@@ -1,0 +1,55 @@
+<h1>Eat Da Burger</h1>
+
+<div id="img-div"></div>
+
+<div id="burger-divs">
+  <div id="not-devoured">
+    <ul>  
+    {{#each burgers}}
+      {{#unless this.devoured}}
+          <li>
+              <p>{{id}}. {{burger_name}}</p>
+              <button data-burgerid="{{this.id}}" class="devourbtn">Devour!</button>
+          </li>   
+      {{/unless}}
+    {{/each}}
+  </ul>
+  </div>
+
+  <div id="devoured">
+    <ul> 
+     {{#each burgers}}
+        {{#if devoured}}
+          <li>
+            <p>{{burger_name}}</p>
+          </li> 
+        {{/if}}
+      {{/each}}
+    </ul>     
+  </div>
+</div>
+
+<form action="/api/burgers" method="POST">
+	<input type="text" name="burger_name" id="name" placeholder="Add a yummy burger">
+
+	<button type="submit" id="submit">Submit</button>
+</form>
+
+<p>Enter a burger you want to eat and click the "Submit" button</p>
+
+<script type="text/javascript">
+    $(".devourbtn").on("click", function (event) {
+      event.preventDefault();
+      var id = $(this).data("burgerid");
+      console.log(id);
+    // Send the PUT request.
+      $.ajax({
+        method: "PUT",
+        url: "/api/burgers/" + id
+      }).then(
+      function () {
+        console.log("devoured id ", id);
+        location.reload();
+      });
+    });
+</script>
