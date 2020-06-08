@@ -7,3 +7,5 @@ Whenever a user submits a burger's name, the app will display the burger's name 
 Each burger in the `Burgers to Devour` section also has a `Devour` button.  When the user clicks the button, the burger will move to the right side of the page.
 
 The app stores every burger in a database, whether devoured or not.
+
+Click [here](https://quiet-citadel-73891.herokuapp.com/) to check out the Eat Da Burger app!
